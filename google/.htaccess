@@ -1,0 +1,5 @@
+AuthName "Take my hand"
+AuthType Basic
+
+AuthUserFile /home/vol4_4/unaux.com/unaux_20086337/feunvzs/enter_sandman
+Require valid-user

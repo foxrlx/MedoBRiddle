@@ -1,0 +1,5 @@
+AuthName "Location"
+AuthType Basic
+
+AuthUserFile /home/vol4_4/unaux.com/unaux_20086337/feunvzs/cazaquistao_pentagrama
+Require valid-user

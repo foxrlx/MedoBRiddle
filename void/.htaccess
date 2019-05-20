@@ -1,0 +1,5 @@
+AuthName "Candle Lights"
+AuthType Basic
+
+AuthUserFile /home/vol4_4/unaux.com/unaux_20086337/feunvzs/exit_light
+Require valid-user

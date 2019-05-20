@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../favicon.ico" />
+<link rel="stylesheet" href="../css/style.css" />
+<title>30 Night Fears</title>
+<script type="text/javascript" src="../script/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    var click = false;
+	function s() {
+		if (!click) {
+			click = true;
+			$("#js").fadeIn(100);
+			$("#js").addClass("jsShow");
+			$("#js").fadeOut(2000, fim);
+		}
+	}
+	function fim() {
+		var nome = prompt("Digite o seu nome");
+		if (nome == null || nome.length <= 0) {
+			alert("Digite o nome");
+			click = false;
+			return;
+		}
+		var dados = {Nome:nome};
+		$.ajax({
+			url: "gravarfim.php",
+			method: "post",
+			data: dados,
+			success: function (dados) {
+				if (dados == "1") {
+					window.location = "http://www.medob.com.br"
+				}
+			}
+		});
+	}
+</script>
+</head>
+
+<body>
+      <div class="js" id="js"><img src="screen2.jpg" /></div>
+      <div class="container">
+         <div class="col-12">
+            <img class="riddle-img" src="screen.jpg" usemap="#area" />
+            <map name="area">
+            	<area shape="circle" coords="400, 300, 35" href="javascript: s();"/>
+            </map>
+         </div>
+      <div class="col-12">
+         <h2>EOF</h2>
+      </div>
+      </div>
+</body>
+</html>
